@@ -10,7 +10,7 @@ pdf在[项目目录](pdf/)下有
 
 普通DAP要试debug时，Reset 选择HW RESET
 
-![软件内部Reset设置图片](static\image\FSDAP_2.png)
+![软件内部Reset设置图片](static/image/FSDAP_2.png)
 
 ## 开发板
 
@@ -20,4 +20,4 @@ pdf在[项目目录](pdf/)下有
 
 开发板图片 :
 
-![开发板图片](static\image\野火指南者.jpg)
+![开发板图片](static/image/野火指南者.jpg)
