@@ -393,6 +393,11 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f10x.h</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\stm32f10x.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

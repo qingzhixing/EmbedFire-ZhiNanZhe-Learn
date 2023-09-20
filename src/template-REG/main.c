@@ -1,3 +1,5 @@
+#include "lib/stm32f10x.h"
+
 int main(void)
 {
 }
