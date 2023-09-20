@@ -36,8 +36,8 @@
 
 // 时钟RCC外设地址
 #define RCC_BASE (AHB_PERIPHERAL_BASE + 0x1000)
-#define RCC_APB2_ENR (RCC_BASE + 0x18)
+#define RCC_APB2_ENR_BASE (RCC_BASE + 0x18)
 
-#define GET_ADDR_DATA_BYTE(address) (*(uint8_t *)(address))
+#define GET_ADDR_DATA_BYTE(address) (*(uint32_t *)(address))
 
 #endif /* __LIB_STM32F10X_H */
