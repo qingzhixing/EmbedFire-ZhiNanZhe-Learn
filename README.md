@@ -14,7 +14,7 @@ pdf在[项目目录](pdf/)下有
 
 ## 开发板
 
-芯片型号: STM32F103VET
+芯片型号: STM32F103VET6
 
 开发板: [野火STM32指南者](https://doc.embedfire.com/stm32_products/must_read/zh/latest/doc/introduction_of_stm32/STM32/ebf_stm32f103_zhinanzhe/stm32f103_zhinanzhe.html "文档")
 
