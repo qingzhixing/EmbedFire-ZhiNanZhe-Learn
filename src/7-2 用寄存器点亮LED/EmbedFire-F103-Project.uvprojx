@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Template-REG</TargetName>
+      <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
@@ -397,6 +397,16 @@
               <FileName>stm32f10x.h</FileName>
               <FileType>1</FileType>
               <FilePath>.\lib\stm32f10x.h</FilePath>
+            </File>
+            <File>
+              <FileName>bit.h</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\bit.h</FilePath>
+            </File>
+            <File>
+              <FileName>stdint.h</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\stdint.h</FilePath>
             </File>
           </Files>
         </Group>
