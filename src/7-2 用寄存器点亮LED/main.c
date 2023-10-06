@@ -2,14 +2,14 @@
 #include "lib/stm32f10x.h"
 
 // 0-G 1-B 5-R
-#define OPEN_GPIOB_IDX 0
+#define OPEN_GPIOB_IDX 5
 
 int main(void)
 {
 	/*
 		打开GPIOB时钟:使用外设前需要打开时钟
 	*/
-	SET_DIGIT_1(GET_ADDR_DATA_BYTE(RCC_APB2_ENR_BASE), 3);
+	SET_DIGIT_1(RCC->APB2ENR, 3);
 
 	/*
 		配置CRL : 低八位IO口

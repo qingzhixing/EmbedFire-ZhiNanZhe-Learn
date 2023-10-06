@@ -28,9 +28,24 @@ typedef struct
 #define GPIOB_BASE (APB2_PERIPHERAL_BASE + 0x0C00)
 #define GPIOB ((GPIO_TypeDef *)GPIOB_BASE)
 
+// RCC 结构
+typedef struct
+{
+    uint32_t CR;
+    uint32_t CFGR;
+    uint32_t CIR;
+    uint32_t APB2RSTR;
+    uint32_t APB1RSTR;
+    uint32_t AHBENR;
+    uint32_t APB2ENR;
+    uint32_t APB1ENR;
+    uint32_t BDCR;
+    uint32_t CSR;
+} RCC_TypeDef;
+
 // 时钟RCC外设地址
 #define RCC_BASE (AHB_PERIPHERAL_BASE + 0x1000)
-#define RCC_APB2_ENR_BASE (RCC_BASE + 0x18)
+#define RCC ((RCC_TypeDef *)RCC_BASE)
 
 #define GET_ADDR_DATA_BYTE(address) (*(uint32_t *)(address))
 
