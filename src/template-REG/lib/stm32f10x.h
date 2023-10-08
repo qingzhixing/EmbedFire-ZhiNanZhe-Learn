@@ -22,7 +22,7 @@ typedef struct
     uint32_t BSRR;
     uint32_t BRR;
     uint32_t LCKR;
-} GPIO_TypeDef;
+} GPIO_Type;
 
 // GPIO
 #define GPIOB_BASE (APB2_PERIPHERAL_BASE + 0x0C00)

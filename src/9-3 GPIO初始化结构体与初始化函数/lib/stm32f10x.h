@@ -22,11 +22,11 @@ typedef struct
     uint32_t BSRR;
     uint32_t BRR;
     uint32_t LCKR;
-} GPIO_TypeDef;
+} GPIO_Type;
 
 // GPIO
 #define GPIOB_BASE (APB2_PERIPHERAL_BASE + 0x0C00)
-#define GPIOB ((GPIO_TypeDef *)GPIOB_BASE)
+#define GPIOB ((GPIO_Type *)GPIOB_BASE)
 
 // RCC 结构
 typedef struct
@@ -41,11 +41,11 @@ typedef struct
     uint32_t APB1ENR;
     uint32_t BDCR;
     uint32_t CSR;
-} RCC_TypeDef;
+} RCC_Type;
 
 // 时钟RCC外设地址
 #define RCC_BASE (AHB_PERIPHERAL_BASE + 0x1000)
-#define RCC ((RCC_TypeDef *)RCC_BASE)
+#define RCC ((RCC_Type *)RCC_BASE)
 
 #define GET_ADDR_DATA_BYTE(address) (*(uint32_t *)(address))
 
