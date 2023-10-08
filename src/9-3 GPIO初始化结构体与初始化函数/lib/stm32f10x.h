@@ -3,6 +3,9 @@
 #include "stdint.h"
 // 用来存储 stm32f10x 的寄存器映射
 
+// 防止编译器自动优化GPIO端口
+#define __IO volatile
+
 // 外设基地址
 #define PERIPHERAL_BASE ((uint32_t)0x40000000)
 
@@ -15,13 +18,13 @@
 // GPIO结构:
 typedef struct
 {
-    uint32_t CRL;
-    uint32_t CRH;
-    uint32_t IDR;
-    uint32_t ODR;
-    uint32_t BSRR;
-    uint32_t BRR;
-    uint32_t LCKR;
+    __IO uint32_t CRL;
+    __IO uint32_t CRH;
+    __IO uint32_t IDR;
+    __IO uint32_t ODR;
+    __IO uint32_t BSRR;
+    __IO uint32_t BRR;
+    __IO uint32_t LCKR;
 } GPIO_Type;
 
 // GPIO
@@ -31,16 +34,16 @@ typedef struct
 // RCC 结构
 typedef struct
 {
-    uint32_t CR;
-    uint32_t CFGR;
-    uint32_t CIR;
-    uint32_t APB2RSTR;
-    uint32_t APB1RSTR;
-    uint32_t AHBENR;
-    uint32_t APB2ENR;
-    uint32_t APB1ENR;
-    uint32_t BDCR;
-    uint32_t CSR;
+    __IO uint32_t CR;
+    __IO uint32_t CFGR;
+    __IO uint32_t CIR;
+    __IO uint32_t APB2RSTR;
+    __IO uint32_t APB1RSTR;
+    __IO uint32_t AHBENR;
+    __IO uint32_t APB2ENR;
+    __IO uint32_t APB1ENR;
+    __IO uint32_t BDCR;
+    __IO uint32_t CSR;
 } RCC_Type;
 
 // 时钟RCC外设地址

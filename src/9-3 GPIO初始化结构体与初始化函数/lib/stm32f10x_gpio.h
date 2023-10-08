@@ -22,14 +22,14 @@
 #define GPIO_PIN_15 GPIO_PIN_x(15)
 #define GPIO_PIN_ALL 0xFFFF
 
-enum GPIO_SpeedType
+typedef enum
 {
     GPIO_Speed_10MHz = 1, // 0b01
     GPIO_Speed_2MHz = 2,  // 0b10
     GPIO_Speed_50MHz = 3  // 0b11
-};
+} GPIO_SpeedType;
 
-enum GPIOMode_TypeDef
+typedef enum
 {
     GPIO_Mode_AIN = 0x0,          // 模拟输入     (0000 0000)b
     GPIO_Mode_IN_FLOATING = 0x04, // 浮空输入     (0000 0100)b
@@ -40,8 +40,8 @@ enum GPIOMode_TypeDef
     GPIO_Mode_Out_PP = 0x10, // 推挽输出     (0001 0000)b
     GPIO_Mode_AF_OD = 0x1C,  // 复用开漏输出 (0001 1100)b
     GPIO_Mode_AF_PP = 0x18   // 复用推挽输出 (0001 1000)b
-};
-struct GPIO_InitType
+} GPIOMode_TypeDef;
+typedef struct
 {
     // 初始化的GPIO端口号
     uint16_t GPIO_Pin;
@@ -51,7 +51,7 @@ struct GPIO_InitType
 
     // 选择GPIO引脚工作模式
     GPIOMode_TypeDef GPIO_Mode;
-};
+} GPIO_InitType;
 
 void GPIO_SetBits(GPIO_Type *, uint16_t);
 void GPIO_ResetBits(GPIO_Type *, uint16_t);
