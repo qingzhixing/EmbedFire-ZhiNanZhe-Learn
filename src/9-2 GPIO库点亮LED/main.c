@@ -1,8 +1,8 @@
 #include "lib/bit.h"
-#include "lib/stm32f10x.h"
+#include "lib/stm32f10x_gpio.h"
 
 // 0-G 1-B 5-R
-#define OPEN_GPIOB_IDX 5
+#define OPEN_GPIOB_IDX 1
 
 int main(void)
 {
@@ -23,10 +23,9 @@ int main(void)
 	// 设置控制置为0b0001
 	SET_DIGIT_1(GPIOB->CRL, 4 * OPEN_GPIOB_IDX);
 
-	// LED_R = GPIOB_(OPEN_GPIOB_IDX)输出 0 开灯
-	SET_DIGIT_0(GPIOB->ODR, OPEN_GPIOB_IDX);
+	// LED_x = GPIOB_(OPEN_GPIOB_IDX)输出 0 开灯
+	GPIO_ResetBits(GPIOB->ODR, 1 << OPEN_GPIOB_IDX);
 
-	// TODO:止步于GPIO库
 	while (1)
 		;
 }
