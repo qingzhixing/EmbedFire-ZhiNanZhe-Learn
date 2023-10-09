@@ -3,7 +3,7 @@
 #include "stm32f10x.h"
 // 用来定义GPIO相关功能
 // 定义GPIO_PIN
-#define GPIO_PIN_x(index) (uint16_t(1 << index))
+#define GPIO_PIN_x(index) (1 << (index))
 #define GPIO_PIN_0 GPIO_PIN_x(0)
 #define GPIO_PIN_1 GPIO_PIN_x(1)
 #define GPIO_PIN_2 GPIO_PIN_x(2)
