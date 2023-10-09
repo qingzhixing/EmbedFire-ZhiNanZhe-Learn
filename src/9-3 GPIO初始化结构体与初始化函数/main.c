@@ -2,7 +2,7 @@
 #include "lib/stm32f10x_gpio.h"
 
 // 0-G 1-B 5-R
-#define OPEN_GPIOB_IDX 1
+#define OPEN_GPIOB_IDX 0
 
 int main(void)
 {
@@ -18,13 +18,23 @@ int main(void)
 		MODE_OPEN_GPIOB_IDX = 0x01 - 10MHz输出
 		CNF_OPEN_GPIOB_IDX = 0x00 - 推挽输出
 	*/
-	// 清空设置
-	GPIOB->CRL &= ~(0xF << (4 * OPEN_GPIOB_IDX));
-	// 设置控制置为0b0001
-	SET_DIGIT_1(GPIOB->CRL, 4 * OPEN_GPIOB_IDX);
+	// // 清空设置
+	// GPIOB->CRL &= ~(0xF << (4 * OPEN_GPIOB_IDX));
+	// // 设置控制置为0b0001
+	// SET_DIGIT_1(GPIOB->CRL, 4 * OPEN_GPIOB_IDX);
+
+	GPIO_InitType *GPIOB_InitStruct = (GPIO_InitType *)malloc(sizeof(GPIO_InitType));
+
+	GPIOB_InitStruct->GPIO_Pin = 1 << OPEN_GPIOB_IDX;
+	GPIOB_InitStruct->GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIOB_InitStruct->GPIO_Speed = GPIO_Speed_10MHz;
+
+	GPIO_Init(GPIOB, GPIOB_InitStruct);
 
 	// LED_x = GPIOB_(OPEN_GPIOB_IDX)输出 0 开灯
 	GPIO_ResetBits(GPIOB->ODR, 1 << OPEN_GPIOB_IDX);
+
+	free(GPIOB_InitStruct);
 
 	while (1)
 		;

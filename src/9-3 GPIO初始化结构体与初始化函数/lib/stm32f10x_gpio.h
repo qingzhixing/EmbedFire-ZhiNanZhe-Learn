@@ -55,4 +55,5 @@ typedef struct
 
 void GPIO_SetBits(GPIO_Type *, uint16_t);
 void GPIO_ResetBits(GPIO_Type *, uint16_t);
+void GPIO_Init(GPIO_Type *GPIOx, GPIO_InitType *GPIO_InitStruct);
 #endif /* __LIB_STM32F10X_GPIO_H */
