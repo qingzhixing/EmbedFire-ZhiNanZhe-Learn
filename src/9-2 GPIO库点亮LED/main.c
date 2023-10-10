@@ -24,7 +24,7 @@ int main(void)
 	SET_DIGIT_1(GPIOB->CRL, 4 * OPEN_GPIOB_IDX);
 
 	// LED_x = GPIOB_(OPEN_GPIOB_IDX)输出 0 开灯
-	GPIO_ResetBits(GPIOB->ODR, 1 << OPEN_GPIOB_IDX);
+	GPIO_ResetBits(GPIOB, 1 << OPEN_GPIOB_IDX);
 
 	while (1)
 		;
