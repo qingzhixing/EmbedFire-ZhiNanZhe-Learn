@@ -2,7 +2,7 @@
 #include "lib/stm32f10x_gpio.h"
 
 // 0-G 1-B 5-R
-#define LED_PIN_INDEX 0
+#define LED_PIN_INDEX 1
 
 #define LED_GPIO_PORT GPIOB
 #define LED_GPIO_CLK_ENABLE (SET_DIGIT_1(RCC->APB2ENR, 3))
