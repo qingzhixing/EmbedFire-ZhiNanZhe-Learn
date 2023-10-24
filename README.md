@@ -20,6 +20,12 @@ pdf在[项目目录](pdf/)下有
 
 ![软件内部Reset设置图片](static/image/FSDAP_2.png)
 
+[最新版KEIL error: non-ASM statement in naked function is not supported或者 ‘__STATIC_INLINE‘-CSDN博客](https://blog.csdn.net/weixin_41747032/article/details/125102226)
+
+选用version5编译器(新版本默认version 6)
+
+![1698152112651](image/README/1698152112651.png)
+
 ## 开发板
 
 芯片型号: STM32F103VET6
