@@ -19,9 +19,9 @@ int main(void)
 	// 阻塞
 	while (1)
 	{
-		GPIO_SetBits(LED_GPIO_PORT, LED_G_GPIO_PIN);
+		GPIO_SetBits(LED_GPIO_PORT, LED_R_GPIO_PIN);
 		Delay(0xFFFFF);
-		GPIO_ResetBits(LED_GPIO_PORT, LED_G_GPIO_PIN);
+		GPIO_ResetBits(LED_GPIO_PORT, LED_R_GPIO_PIN);
 		Delay(0xFFFfF);
 	}
 }

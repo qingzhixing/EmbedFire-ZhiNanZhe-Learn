@@ -24,9 +24,15 @@ int main(void)
 	// 阻塞
 	while (1)
 	{
+		// Key1 - LED_G
 		if (Key_Scan(KEY1_GPIO_PORT, KEY1_GPIO_PIN) == KEY_ON)
 		{
 			LED_TOGGLE(LED_G_GPIO_PIN);
+		}
+		// Key2 - LED_R
+		if (Key_Scan(KEY2_GPIO_PORT, KEY2_GPIO_PIN) == KEY_ON)
+		{
+			LED_TOGGLE(LED_R_GPIO_PIN);
 		}
 	}
 }

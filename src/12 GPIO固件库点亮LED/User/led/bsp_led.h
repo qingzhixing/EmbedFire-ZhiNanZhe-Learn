@@ -9,4 +9,21 @@
 #define LED_GPIO_PORT GPIOB
 #define LED_GPIO_CLK RCC_APB2Periph_GPIOB
 
+#define LED_TOGGLE(LED_PIN)              \
+    {                                    \
+        LED_GPIO_PORT->ODR ^= (LED_PIN); \
+    }
+
+#define LED_ON(LED_PIN)                  \
+    {                                    \
+        LED_GPIO_PORT->BRR = (LED_PIN); \
+    }
+
+#define LED_OFF(LED_PIN)                \
+    {                                   \
+        LED_GPIO_PORT->BSRR = (LED_PIN); \
+    }
+
+void LED_GPIO_Config(void);
+
 #endif /* __LED_BSP_LED_H */

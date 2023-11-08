@@ -2,6 +2,7 @@
     "files.associations": {
         "stm32f10x.h": "c",
         "stdint.h": "c",
-        "bit.h": "c"
+        "bit.h": "c",
+        "bsp_key.h": "c"
     }
 }
